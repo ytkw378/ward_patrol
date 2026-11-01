@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="ward_person">
+    <static>true</static>
+    <link name="link">
+      <collision name="body">
+        <pose>0 -0.05 0.875 0 0 0</pose>
+        <geometry><box><size>0.45 0.28 1.75</size></box></geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0.02 0.04 0 0</pose>
+        <geometry>
+          <mesh><uri>model://person_standing/meshes/standing.dae</uri></mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
