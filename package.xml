@@ -5,7 +5,7 @@
   <version>1.0.0</version>
   <description>AI (YOLOv8-Pose + LiDAR) で病室の転倒者を見つけて通報する夜間巡回ロボット</description>
   <maintainer email="ytkw378@users.noreply.github.com">ytkw378</maintainer>
-  <license>Apache-2.0</license>
+  <license>MIT</license>
 
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>

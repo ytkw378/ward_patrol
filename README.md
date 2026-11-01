@@ -71,8 +71,17 @@ python3 /workspace/ros2_ws/src/ward_patrol/scripts/make_video.py A /workspace/ou
 高さは「体幹キーポイントの画像上の行」と「体幹方向の LiDAR 距離」から、
 カメラの高さ・俯角を考慮したピンホールモデルで計算する (`pose_analysis.point_height`)。
 
-## 出典
+## ライセンス
 
-- `models/person_standing`: [osrf/gazebo_models](https://github.com/osrf/gazebo_models) (Marina Kollmitz, MakeHuman)
-- `models/patrol_robot`: TurtleBot3 (ROBOTIS, Apache-2.0) の Waffle Pi モデルを改変
-- `weights/yolov8n-pose.pt`: [Ultralytics](https://github.com/ultralytics/ultralytics) (AGPL-3.0)
+自作のコードは [MIT License](LICENSE) です。第三者の素材は、それぞれ元のライセンスに従います。
+
+| 対象 | ライセンス |
+|---|---|
+| 自作コード (`ward_patrol/`, `launch/`, `scripts/`, `test/`, `worlds/`, `models/ward_person/` など) | MIT |
+| `weights/yolov8n-pose.pt` ([Ultralytics](https://github.com/ultralytics/ultralytics)) | AGPL-3.0 |
+| `models/person_standing/` ([osrf/gazebo_models](https://github.com/osrf/gazebo_models), Marina Kollmitz, MakeHuman) | CC BY 3.0 |
+| `models/patrol_robot/model.sdf` (TurtleBot3 Waffle Pi, ROBOTIS を改変) | Apache-2.0 |
+
+**注意**: 転倒検知には Ultralytics (AGPL-3.0) を使います。本ソフトウェアを Ultralytics と組み合わせて配布する場合、
+またはネットワーク越しのサービスとして提供する場合は、全体として AGPL-3.0 の条件を満たす必要があります。
+詳細とライセンス本文は [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) と [licenses/](licenses/) を参照してください。
